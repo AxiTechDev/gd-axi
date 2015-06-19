@@ -1,0 +1,38 @@
+title = "Year End Form Submitted"
+url = "/year-end-form-submitted"
+layout = "temp"
+hidden = "0"
+==
+<?php
+function onInit()
+{
+extract($_POST);
+
+//$firstName = htmlspecialchars($_POST['FirstName']);
+//$system = htmlspecialchars($_POST['ABSystem']);
+
+$this['firstName'] = get('FirstName');
+$this['lastName'] = get('LastName');
+$this['email'] = get('Email');
+$this['school'] = post('SchoolDistrict');
+$this['district'] = post('_District');
+
+
+
+}
+?>
+==
+<div class="jumbotron title-js">
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <h1>Thank You!</h1>
+                <p>We've got your list and we will do whatever we can to prepare you for next year. Have a great summer!</p><br />
+                <p>Be sure to visit us at <a href="http://axiedu.com" >axiedu.com</a></p><br />
+                {#<p>{{firstName }}</p>  <p>Last Name:  {{ lastName }}</p>  <p>Email:  {{ email }}</p>
+                <p>   {{'School: ' ~ school }}</p>  <p>District:  {{ district }}</p>#}
+                <br/>
+            </div>
+        </div>
+    </div>
+</div>

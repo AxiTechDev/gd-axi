@@ -1,0 +1,641 @@
+title = "Year End Checklist"
+url = "/year-end-checklist"
+layout = "temp"
+hidden = "0"
+
+[checker]
+==
+<link href="{{ [
+            'assets/less/pages/all.less'
+        ]|theme }}" rel="stylesheet">
+        
+
+<div class="jumbotron">
+    <h1>School is out!</h1>
+    <p>Now is the time to take inventory. Let us know what you need now, so you can relax all summer!</p>
+</div>
+
+<div class="container heading basic" >
+    <h1>End of the Year Checklist</h1>
+    <hr />    
+</div>
+
+<div class="container " >
+    
+    {# Infusionsoft Form #}
+    <form accept-charset="UTF-8" action="https://oc232.infusionsoft.com/app/form/process/4c063193fec43ae626005f97d331f6cb" class="infusion-form" method="POST">
+        <input name="inf_form_xid" type="hidden" value="4c063193fec43ae626005f97d331f6cb" />
+        <input name="inf_form_name" type="hidden" value="EOY Checklist" />
+        <input name="infusionsoft_version" type="hidden" value="1.41.0.42" />
+
+        <div class="spacer"></div>
+
+        {# This is the School and customoer information section of the form #}
+        <div class="container basic">
+            {% component 'checker' %}
+        </div>
+
+        {# ActivBoard Systems #}
+        <div class="basic inner" >
+            <h3>Promethean Systems</h3>
+            <div class="spacer"></div>
+            
+            <div class="infusion-field">
+                
+        <label for="inf_custom_ActivBoardWorks">ActivBoard Works?</label>
+        <div class="infusion-radio">
+            <span class="infusion-option">
+                <input id="inf_custom_ActivBoardWorks_Yes" name="inf_custom_ActivBoardWorks" type="radio" value="Yes" />
+                <label for="inf_custom_ActivBoardWorks_Yes">Yes</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="infusion-option">
+                <input id="inf_custom_ActivBoardWorks_No" name="inf_custom_ActivBoardWorks" type="radio" value="No" />
+                <label for="inf_custom_ActivBoardWorks_No">No</label>
+            </span>
+        </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="infusion-field">
+        <ul class="no-indent" >
+        <label for="inf_custom_ActivBoardDescription">ActivBoard Description</label>
+        <li><input class="infusion-field-input-container" id="inf_custom_ActivBoardDescription" name="inf_custom_ActivBoardDescription" type="radio" value="Border is light gray" />&nbsp;&nbsp;&nbsp;<label for="" >Border is light gray</label></li>
+        <li><input class="infusion-field-input-container" id="inf_custom_ActivBoardDescription" name="inf_custom_ActivBoardDescription" type="radio" value="Border is dark gray" />&nbsp;&nbsp;&nbsp;<label for="" >Border is dark gray</label></li>
+        </ul>
+    </div>
+    <div class="spacer"></div>
+    <div class="infusion-field">
+        <label for="inf_custom_ActivBoardComments">ActivBoard Comments</label><br />
+        <textarea cols="24" id="inf_custom_ActivBoardComments" name="inf_custom_ActivBoardComments" rows="5" class="form-control">
+    </textarea></div>
+            
+            <div class="spacer"></div>
+        </div>
+        
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        
+        {# Projectors #}
+        <div class="basic inner" >
+            <h2>Projectors</h2>
+            <div class="spacer"></div>
+            
+            <div class="infusion-field">
+        <label for="inf_custom_ProjectorWorks1">Projector Works?</label>
+        <div class="infusion-radio">
+            <span class="infusion-option">
+                <input id="inf_custom_ProjectorWorks1_Yes" name="inf_custom_ProjectorWorks1" type="radio" value="Yes" />
+                <label for="inf_custom_ProjectorWorks1_Yes">Yes</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="infusion-option">
+                <input id="inf_custom_ProjectorWorks1_No" name="inf_custom_ProjectorWorks1" type="radio" value="No" />
+                <label for="inf_custom_ProjectorWorks1_No">No</label>
+            </span>
+        </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="infusion-field">
+        <ul class="no-indent" ><label for="inf_custom_ProjectorDescription">Projector Description</label>
+        <li><input class="infusion-field-input-container" id="inf_custom_ProjectorDescription" name="inf_custom_ProjectorDescription" type="radio" value="Orange" />&nbsp;&nbsp;&nbsp;<label>Orange</label></li>
+        <li><input class="infusion-field-input-container" id="inf_custom_ProjectorDescription" name="inf_custom_ProjectorDescription" type="radio" value="Silver" />&nbsp;&nbsp;&nbsp;<label>Silver</label></li>
+        <li><input class="infusion-field-input-container" id="inf_custom_ProjectorDescription" name="inf_custom_ProjectorDescription" type="radio" value="Black" />&nbsp;&nbsp;&nbsp;<label>Black</label></li>
+        </ul>
+    </div>
+    <div class="spacer"></div>
+    <div class="infusion-field">
+        <label for="inf_custom_ProjectorComments">Projector Comments</label><br />
+        <textarea cols="24" id="inf_custom_ProjectorComments" name="inf_custom_ProjectorComments" rows="5" class="form-control">
+    </textarea></div>
+            
+            <div class="spacer"></div>
+        </div>
+        
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        
+        {# Remotes and Pens #}
+        <div class="basic inner" >
+            <h2>Remotes and Pens</h2>
+            <div class="spacer"></div>
+            
+            <div class="infusion-field">
+        <label for="inf_custom_PensWork">Pens Work?</label>
+        <div class="infusion-radio">
+            <span class="infusion-option">
+                <input id="inf_custom_PensWork_Yes" name="inf_custom_PensWork" type="radio" value="Yes" />
+                <label for="inf_custom_PensWork_Yes">Yes</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="infusion-option">
+                <input id="inf_custom_PensWork_No" name="inf_custom_PensWork" type="radio" value="No" />
+                <label for="inf_custom_PensWork_No">No</label>
+            </span>
+        </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="infusion-field">
+        <ul class="no-indent" ><label for="inf_custom_PenDescription">Pen Description</label>
+        <li>
+            <input class="infusion-field-input-container" id="inf_custom_PenDescription" name="inf_custom_PenDescription" type="radio" value="ActivPen3" />&nbsp;&nbsp;&nbsp;<label>Gray and orange</label>
+        </li>
+        <li>
+            <input class="infusion-field-input-container" id="inf_custom_PenDescription" name="inf_custom_PenDescription" type="radio" value="ActivPen4" />&nbsp;&nbsp;&nbsp;<label>Dark gray (Teacher's) and Light gray (Student's)</label>
+        </li>
+        </ul>
+    </div>
+    <div class="spacer"></div>
+    <div class="infusion-field">
+        <label for="inf_custom_PenComments">Pen Comments</label><br />
+        <textarea cols="24" id="inf_custom_PenComments" name="inf_custom_PenComments" rows="5" class="form-control">
+    </textarea></div>
+    
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    
+    <div class="infusion-field">
+        <label for="inf_custom_RemoteWorks0">Remote Works?</label>
+        <div class="infusion-radio">
+            <span class="infusion-option">
+                <input id="inf_custom_RemoteWorks0_Yes" name="inf_custom_RemoteWorks0" type="radio" value="Yes" />
+                <label for="inf_custom_RemoteWorks0_Yes">Yes</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="infusion-option">
+                <input id="inf_custom_RemoteWorks0_No" name="inf_custom_RemoteWorks0" type="radio" value="No" />
+                <label for="inf_custom_RemoteWorks0_No">No</label>
+            </span>
+        </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="infusion-field">
+        <label for="inf_custom_RemoteComments">Remote Comments</label><br />
+        <textarea cols="24" id="inf_custom_RemoteComments" name="inf_custom_RemoteComments" rows="5" class="form-control">
+    </textarea></div>
+            
+            <div class="spacer"></div>
+        </div>
+    
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        
+        {# Anything broke? #}
+        <div class="basic inner" >
+            <h3>If anything is not working please check off the pictures below to help us determine exactly what we need to order for you</h3>
+            <div class="spacer"></div>
+            
+        {# Projectors #}
+        
+            <h2>Projectors</h2>
+            <div class="spacer"></div>
+            
+            <div style=" width: 80%; margin: 0 auto;" >
+                <div class="infusion-field prod" >
+                     <img src="{{ 'assets/images/checklist/prm1020.jpg'|theme }}" class="product-img" /><br/>
+                  <input id="inf_custom_Projector_PRM 10 20 or xe40" name="inf_custom_Projector" type="radio" value="PRM 10 20 or xe40" /><label>PRM 20</label>
+                </div>
+           
+                <div class="infusion-field prod" >
+                    <img src="{{ 'assets/images/checklist/prm30.jpg'|theme }}" class="product-img" /><br/>
+                  <input id="inf_custom_Projector_PRM 30" name="inf_custom_Projector" type="radio" value="PRM 30" /><label>PRM 30</label>
+                </div>
+            
+                <div class="infusion-field prod" >
+                    <img src="{{ 'assets/images/checklist/prm32-35.jpg'|theme }}" class="product-img" /><br/>
+                  <input id="inf_custom_Projector_PRM 35" name="inf_custom_Projector" type="radio" value="PRM 35" /><label>PRM 35</label>
+                </div>
+            
+                <div class="infusion-field prod" >
+                  <img src="{{ 'assets/images/checklist/est-p1.jpg'|theme }}" class="product-img" /><br/>
+                  <input id="inf_custom_Projector_EST" name="inf_custom_Projector" type="radio" value="EST" /><label>EST</label>
+                </div>
+            </div>
+            
+            <div style=" width: 80%; margin: 0 auto;" >
+                <div class="infusion-field prod" >
+                    <img src="{{ 'assets/images/checklist/blx30nst.jpg'|theme }}" class="product-img" /><br/>
+                  <input id="inf_custom_Projector_AXI/Boxlight" name="inf_custom_Projector" type="radio" value="BL X30NST" /><label>BL X30NST</label>
+                </div>
+            
+                <div class="infusion-field prod" >
+                    <img src="{{ 'assets/images/checklist/ecox32nst.png'|theme }}" class="product-img" /><br/>
+                  <input id="inf_custom_Projector_AXI/Boxlight" name="inf_custom_Projector" type="radio" value="Eco X32NST" /><label>Eco X32NST</label>
+                </div>
+            
+                <div class="infusion-field prod" >
+                   <img src="{{ 'assets/images/bl-proj.png'|theme }}" class="product-img" /><br/>
+                  <input id="inf_custom_Projector_AXI/Boxlight" name="inf_custom_Projector" type="radio" value="AXI/Boxlight" /><label>AXI/Boxlight</label>
+                </div>
+            
+                <div class="infusion-field prod" >
+                    <img src="{{ 'assets/images/mount.png'|theme }}" class="product-img" /><br/>
+                  <input id="inf_custom_Projector_Ceiling Mount" name="inf_custom_Projector" type="radio" value="Ceiling Mount" /><label>Ceiling Mount</label>
+                </div>
+            </div>
+            
+            <div style=" width: 40%; margin: 0 auto;" >
+                <div class="infusion-field prod" >
+                   <label >If your projector is not listed, please let us know what you have:</label>
+                    <textarea class="form-control" id="inf_custom_OtherProjector" name="inf_custom_OtherProjector" rows="3" ></textarea>
+                </div>
+            </div>
+
+        
+        {# ActiVotes #}
+        
+            <h2>ActiVotes</h2>
+            <div class="spacer"></div>
+            
+            <div style=" width: 40%; margin: 0 auto;" >
+             <div class="infusion-field prod" >
+                 <img src="{{ 'assets/images/vote1.png'|theme }}" class="product-img" /><br/>
+                 <input type="checkbox" id="inf_custom_ActiVote1" name="inf_custom_ActiVote1" value="Yes" /><label for="inf_custom_ActiVote1" >ActiVote 1</label>
+            </div>
+    {#<div class="infusion-field" >
+        <label for="inf_custom_ActiVote1Qty" >ActiVote 1 Qty</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActiVote1Qty" name="inf_custom_ActiVote1Qty" type="text" style="float: right;"/>
+    </div>
+    <br />#}
+    <div class="infusion-field prod">
+        <img src="{{ 'assets/images/vote2.png'|theme }}" class="product-img" /><br/>
+        <input type="checkbox" id="inf_custom_ActiVote2" name="inf_custom_ActiVote2" value="Yes" /><label for="inf_custom_ActiVote2">ActiVote 2</label>
+        {#<label for="inf_custom_ActiVote2">ActiVote 2</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActiVote2" name="inf_custom_ActiVote2" type="text" />#}
+    </div>
+    {#<br />
+    <div class="infusion-field">
+        <label for="inf_custom_ActiVote2Qty" >ActiVote 2 Qty</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActiVote2Qty" name="inf_custom_ActiVote2Qty" type="text" />
+    </div>#}
+            </div>
+            
+            <div class="spacer"></div>
+        
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        
+        {# ActivExpressions #}
+            <h2>ActivExpressions</h2>
+            <div class="spacer"></div>
+            <div style=" width: 40%; margin: 0 auto;" >
+            <div class="infusion-field prod">
+                <img src="{{ 'assets/images/expression1.png'|theme }}" class="product-img" /><br/>
+                <input type="checkbox" id="inf_custom_ActivExpression1" name="inf_custom_ActivExpression1" value="Yes" /><label for="inf_custom_ActivExpression1" style="clear: both;" >ActivExpression 1</label>
+        {#<label for="inf_custom_ActivExpression1" style="clear: both;" >ActivExpression 1</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActivExpression1" name="inf_custom_ActivExpression1" type="text" />#}
+    </div>
+    {#<div class="infusion-field">
+        <label for="inf_custom_ActivExpression1Qty" style="clear: both;">ActivExpression 1 Qty</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActivExpression1Qty" name="inf_custom_ActivExpression1Qty" type="text" />
+    </div>#}
+    <div class="infusion-field prod">
+        {#<label for="inf_custom_ActivExpression2" style="clear: both;">ActivExpression 2</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActivExpression2" name="inf_custom_ActivExpression2" type="text" />#}
+        <img src="{{ 'assets/images/expression2.png'|theme }}" class="product-img" /><br/>
+        <input type="checkbox" id="inf_custom_ActivExpression2" name="inf_custom_ActivExpression2" value="Yes"><label for="inf_custom_ActivExpression2" style="clear: both;" >ActivExpression 2</label>
+    </div>
+    {#<div class="infusion-field">
+        <label for="inf_custom_ActivExpression2Qty" style="clear: both;">ActivExpression 2 Qty</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActivExpression2Qty" name="inf_custom_ActivExpression2Qty" type="text" />
+    </div>#}
+            </div>
+            <div class="spacer"></div>
+        
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        
+        {# Other Peripherals #}
+            <h2>Peripherals</h2>
+            <div class="spacer"></div>
+            <div style=" width: 60%; margin: 0 auto;" >
+            <div class="infusion-field prod">
+                <img src="{{ 'assets/images/wand.png'|theme }}" class="product-img" /><br/>
+                <input type="checkbox" id="inf_custom_ActivWand" name="inf_custom_ActivWand" value="Yes" /><label for="inf_custom_ActivWand">ActivWand</label>
+        {#<label for="inf_custom_ActivWand">ActivWand</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActivWand" name="inf_custom_ActivWand" type="text" />#}
+    </div>
+    {#<div class="infusion-field">
+        <label for="inf_custom_ActivWandQty">ActivWand Qty</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActivWandQty" name="inf_custom_ActivWandQty" type="text" />
+    </div>#}
+    <div class="infusion-field prod">
+        <img src="{{ 'assets/images/slate.png'|theme }}" class="product-img" /><br/>
+        <input type="checkbox" id="inf_custom_ActivSlate" name="inf_custom_ActivSlate" value="Yes" /><label for="inf_custom_ActivSlate">ActivSlate</label>
+        {#<label for="inf_custom_ActivSlate">ActivSlate</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActivSlate" name="inf_custom_ActivSlate" type="text" />#}
+    </div>
+    {#<div class="infusion-field">
+        <label for="inf_custom_ActivSlateQty">ActivSlate Qty</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActivSlateQty" name="inf_custom_ActivSlateQty" type="text" />
+    </div>#}
+    <div class="infusion-field prod">
+        <img src="{{ 'assets/images/view.png'|theme }}" class="product-img" /><br/>
+        <input type="checkbox" id="inf_custom_ActiViewCamera" name="inf_custom_ActiViewCamera" value="Yes" /><label for="inf_custom_ActiViewCamera">ActiView Camera</label>
+        {#<label for="inf_custom_ActiViewCamera">ActiView Camera</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActiViewCamera" name="inf_custom_ActiViewCamera" type="text" />#}
+    </div>
+    {#<div class="infusion-field">
+        <label for="inf_custom_ActiViewCameraQty">ActiView Camera Qty</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActiViewCameraQty" name="inf_custom_ActiViewCameraQty" type="text" />
+    </div>#}
+            </div>
+            <div class="spacer"></div>
+        
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        
+        {# Cables #}
+            <h2>Cables</h2>
+            <div class="spacer"></div>
+            <div class="infusion-field prod">
+                <img src="{{ 'assets/images/usb.png'|theme }}" class="product-img" /><br/>
+                <input type="checkbox" id="inf_custom_USBCables" name="inf_custom_USBCables" value="True" /><label for="inf_custom_USBCables">USB Cables</label>
+        {#<label for="inf_custom_USBCables">USB Cables</label>
+        <input class="infusion-field-input-container" id="inf_custom_USBCables" name="inf_custom_USBCables" type="text" />#}
+    </div>
+    <div class="infusion-field prod">
+        <img src="{{ 'assets/images/vga.png'|theme }}" class="product-img" /><br/>
+        <input type="checkbox" id="inf_custom_VGACables" name="inf_custom_VGACables" value="True"><label for="inf_custom_VGACables">VGA Cables</label>
+        {#<label for="inf_custom_VGACables">VGA Cables</label>
+        <input class="infusion-field-input-container" id="inf_custom_VGACables" name="inf_custom_VGACables" type="text" />#}
+    </div>
+    <div class="infusion-field prod">
+        <img src="{{ 'assets/images/rca.png'|theme }}" class="product-img" /><br/>
+        <input type="checkbox" id="inf_custom_VCRDVD" name="inf_custom_VCRDVD" value="True" /><label for="inf_custom_VCRDVD">VCR/DVD Cable</label>
+        {#<label for="inf_custom_VCRDVD">VCR/DVD Cable</label>
+        <input class="infusion-field-input-container" id="inf_custom_VCRDVD" name="inf_custom_VCRDVD" type="text" />#}
+    </div>
+    <br />
+    <div class="infusion-field prod">
+        <img src="{{ 'assets/images/audio.png'|theme }}" class="product-img" /><br/>
+        <input type="checkbox" id="inf_custom_Audio35Cable" name="inf_custom_Audio35Cable" value="True" /><label for="inf_custom_Audio35Cable">Audio (3.5) Cable</label>
+        {#<label for="inf_custom_Audio35Cable">Audio (3.5) Cable</label>
+        <input class="infusion-field-input-container" id="inf_custom_Audio35Cable" name="inf_custom_Audio35Cable" type="text" />#}
+    </div>
+    <div class="infusion-field prod">
+	<img src="{{ 'assets/images/checklist/power-brick.jpg'|theme }}" class="product-img" /><br />
+        <input class="infusion-field-input-container" id="inf_custom_PowerBrick" name="inf_custom_PowerBrick" type="checkbox" value="True" /><label for="inf_custom_PowerBrick">Power Supply</label>
+    </div>
+    <div class="infusion-field prod">
+        <img src="{{ 'assets/images/checklist/hdmi.jpg'|theme }}" class="product-img" /><br/>
+        <input class="infusion-field-input-container" id="inf_custom_HDMI" name="inf_custom_HDMI" type="checkbox" value="True" /><label for="inf_custom_HDMI">HDMI</label>
+    </div>
+            <div class="spacer"></div> 
+    </div>
+        
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        
+        {# Comments #}
+        <div class="basic inner" >
+            <div class="spacer"></div>
+            <label >If you have any comments or if there is anything else we can do for you, just let us know!</label>
+            <textarea class="form-control" id="inf_custom_OtherCommentsorrequests" name="inf_custom_OtherCommentsorrequests" rows="5" ></textarea>
+            <div class="spacer"></div>
+            <div class="spacer"></div>
+            <div class="spacer"></div>
+        
+            {# Submit #}
+            <div class="spacer"></div>
+            <input class="btn btn-default form-control" style="width: 75%; margin: 0 auto; " type="submit" value="Submit" />
+            <div class="spacer"></div>
+        </div>
+    
+    </form>
+    
+    <script type="text/javascript" src="https://oc232.infusionsoft.com/app/webTracking/getTrackingCode?trackingId=a6f8988f5c138d860ff8ab155fe694c2"></script>
+
+</div>
+
+{#  Webform from Infusionsoft
+<form accept-charset="UTF-8" action="https://oc232.infusionsoft.com/app/form/process/4c063193fec43ae626005f97d331f6cb" class="infusion-form" method="POST">
+    <input name="inf_form_xid" type="hidden" value="4c063193fec43ae626005f97d331f6cb" />
+    <input name="inf_form_name" type="hidden" value="EOY Checklist" />
+    <input name="infusionsoft_version" type="hidden" value="1.41.0.42" />
+    <div class="infusion-field">
+        <label for="inf_custom_District">District *</label>
+        <input class="infusion-field-input-container" id="inf_custom_District" name="inf_custom_District" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_SchoolDistrict">School *</label>
+        <input class="infusion-field-input-container" id="inf_custom_SchoolDistrict" name="inf_custom_SchoolDistrict" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_Roomnumber">Room number *</label>
+        <input class="infusion-field-input-container" id="inf_custom_Roomnumber" name="inf_custom_Roomnumber" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_field_FirstName">First Name *</label>
+        <input class="infusion-field-input-container" id="inf_field_FirstName" name="inf_field_FirstName" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_field_LastName">Last Name *</label>
+        <input class="infusion-field-input-container" id="inf_field_LastName" name="inf_field_LastName" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_field_Email">Email *</label>
+        <input class="infusion-field-input-container" id="inf_field_Email" name="inf_field_Email" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_ActivBoardWorks">ActivBoard Works?</label>
+        <div class="infusion-radio">
+            <span class="infusion-option">
+                <input id="inf_custom_ActivBoardWorks_Yes" name="inf_custom_ActivBoardWorks" type="radio" value="Yes" />
+                <label for="inf_custom_ActivBoardWorks_Yes">Yes</label>
+            </span>
+            <span class="infusion-option">
+                <input id="inf_custom_ActivBoardWorks_No" name="inf_custom_ActivBoardWorks" type="radio" value="No" />
+                <label for="inf_custom_ActivBoardWorks_No">No</label>
+            </span>
+        </div>
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_ActivBoardDescription">ActivBoard Description</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActivBoardDescription" name="inf_custom_ActivBoardDescription" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_ActivBoardComments">ActivBoard Comments</label>
+        <textarea cols="24" id="inf_custom_ActivBoardComments" name="inf_custom_ActivBoardComments" rows="5">
+    </textarea></div>
+    <div class="infusion-field">
+        <label for="inf_custom_ProjectorWorks1">Projector Works?</label>
+        <div class="infusion-radio">
+            <span class="infusion-option">
+                <input id="inf_custom_ProjectorWorks1_Yes" name="inf_custom_ProjectorWorks1" type="radio" value="Yes" />
+                <label for="inf_custom_ProjectorWorks1_Yes">Yes</label>
+            </span>
+            <span class="infusion-option">
+                <input id="inf_custom_ProjectorWorks1_No" name="inf_custom_ProjectorWorks1" type="radio" value="No" />
+                <label for="inf_custom_ProjectorWorks1_No">No</label>
+            </span>
+        </div>
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_ProjectorDescription">Projector Description</label>
+        <input class="infusion-field-input-container" id="inf_custom_ProjectorDescription" name="inf_custom_ProjectorDescription" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_ProjectorComments">Projector Comments</label>
+        <textarea cols="24" id="inf_custom_ProjectorComments" name="inf_custom_ProjectorComments" rows="5">
+    </textarea></div>
+    <div class="infusion-field">
+        <label for="inf_custom_PensWork">Pens Work?</label>
+        <div class="infusion-radio">
+            <span class="infusion-option">
+                <input id="inf_custom_PensWork_Yes" name="inf_custom_PensWork" type="radio" value="Yes" />
+                <label for="inf_custom_PensWork_Yes">Yes</label>
+            </span>
+            <span class="infusion-option">
+                <input id="inf_custom_PensWork_No" name="inf_custom_PensWork" type="radio" value="No" />
+                <label for="inf_custom_PensWork_No">No</label>
+            </span>
+        </div>
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_PenDescription">Pen Description</label>
+        <input class="infusion-field-input-container" id="inf_custom_PenDescription" name="inf_custom_PenDescription" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_PenComments">Pen Comments</label>
+        <textarea cols="24" id="inf_custom_PenComments" name="inf_custom_PenComments" rows="5">
+    </textarea></div>
+    <div class="infusion-field">
+        <label for="inf_custom_RemoteWorks0">Remote Works?</label>
+        <div class="infusion-radio">
+            <span class="infusion-option">
+                <input id="inf_custom_RemoteWorks0_Yes" name="inf_custom_RemoteWorks0" type="radio" value="Yes" />
+                <label for="inf_custom_RemoteWorks0_Yes">Yes</label>
+            </span>
+            <span class="infusion-option">
+                <input id="inf_custom_RemoteWorks0_No" name="inf_custom_RemoteWorks0" type="radio" value="No" />
+                <label for="inf_custom_RemoteWorks0_No">No</label>
+            </span>
+        </div>
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_RemoteComments">Remote Comments</label>
+        <textarea cols="24" id="inf_custom_RemoteComments" name="inf_custom_RemoteComments" rows="5">
+    </textarea></div>
+    <div class="infusion-field">
+        <label for="inf_custom_USBCables">USB Cables</label>
+        <input class="infusion-field-input-container" id="inf_custom_USBCables" name="inf_custom_USBCables" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_HDMI">HDMI</label>
+        <input class="infusion-field-input-container" id="inf_custom_HDMI" name="inf_custom_HDMI" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_VGACables">VGA Cables</label>
+        <input class="infusion-field-input-container" id="inf_custom_VGACables" name="inf_custom_VGACables" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_VCRDVD">VCR/DVD Cable</label>
+        <input class="infusion-field-input-container" id="inf_custom_VCRDVD" name="inf_custom_VCRDVD" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_Audio35Cable">Audio (3.5) Cable</label>
+        <input class="infusion-field-input-container" id="inf_custom_Audio35Cable" name="inf_custom_Audio35Cable" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_PowerBrick">Power Brick</label>
+        <input class="infusion-field-input-container" id="inf_custom_PowerBrick" name="inf_custom_PowerBrick" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_Projector">Projector</label>
+        <div class="infusion-radio">
+            <span class="infusion-option">
+                <input id="inf_custom_Projector_PRM 10 20 or xe40" name="inf_custom_Projector" type="radio" value="PRM 10 20 or xe40" />
+                <label for="inf_custom_Projector_PRM 10 20 or xe40">PRM 10 20 or xe40</label>
+            </span>
+            <span class="infusion-option">
+                <input id="inf_custom_Projector_PRM 30" name="inf_custom_Projector" type="radio" value="PRM 30" />
+                <label for="inf_custom_Projector_PRM 30">PRM 30</label>
+            </span>
+            <span class="infusion-option">
+                <input id="inf_custom_Projector_PRM 35" name="inf_custom_Projector" type="radio" value="PRM 35" />
+                <label for="inf_custom_Projector_PRM 35">PRM 35</label>
+            </span>
+            <span class="infusion-option">
+                <input id="inf_custom_Projector_EST" name="inf_custom_Projector" type="radio" value="EST" />
+                <label for="inf_custom_Projector_EST">EST</label>
+            </span>
+            <span class="infusion-option">
+                <input id="inf_custom_Projector_Eco X32NST" name="inf_custom_Projector" type="radio" value="Eco X32NST" />
+                <label for="inf_custom_Projector_Eco X32NST">Eco X32NST</label>
+            </span>
+            <span class="infusion-option">
+                <input id="inf_custom_Projector_BL X30NST" name="inf_custom_Projector" type="radio" value="BL X30NST" />
+                <label for="inf_custom_Projector_BL X30NST">BL X30NST</label>
+            </span>
+            <span class="infusion-option">
+                <input id="inf_custom_Projector_Ceiling Mount" name="inf_custom_Projector" type="radio" value="Ceiling Mount" />
+                <label for="inf_custom_Projector_Ceiling Mount">Ceiling Mount</label>
+            </span>
+        </div>
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_OtherProjector">Other Projector</label>
+        <textarea cols="24" id="inf_custom_OtherProjector" name="inf_custom_OtherProjector" rows="5">
+    </textarea></div>
+    <div class="infusion-field">
+        <label for="inf_custom_ActiVote1">ActiVote 1</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActiVote1" name="inf_custom_ActiVote1" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_ActiVote1Qty">ActiVote 1 Qty</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActiVote1Qty" name="inf_custom_ActiVote1Qty" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_ActiVote2">ActiVote 2</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActiVote2" name="inf_custom_ActiVote2" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_ActiVote2Qty">ActiVote 2 Qty</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActiVote2Qty" name="inf_custom_ActiVote2Qty" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_ActivExpression1">ActivExpression 1</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActivExpression1" name="inf_custom_ActivExpression1" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_ActivExpression1Qty">ActivExpression 1 Qty</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActivExpression1Qty" name="inf_custom_ActivExpression1Qty" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_ActivExpression2">ActivExpression 2</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActivExpression2" name="inf_custom_ActivExpression2" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_ActivExpression2Qty">ActivExpression 2 Qty</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActivExpression2Qty" name="inf_custom_ActivExpression2Qty" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_ActivWand">ActivWand</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActivWand" name="inf_custom_ActivWand" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_ActivWandQty">ActivWand Qty</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActivWandQty" name="inf_custom_ActivWandQty" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_ActivSlate">ActivSlate</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActivSlate" name="inf_custom_ActivSlate" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_ActivSlateQty">ActivSlate Qty</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActivSlateQty" name="inf_custom_ActivSlateQty" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_ActiViewCamera">ActiView Camera</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActiViewCamera" name="inf_custom_ActiViewCamera" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_ActiViewCameraQty">ActiView Camera Qty</label>
+        <input class="infusion-field-input-container" id="inf_custom_ActiViewCameraQty" name="inf_custom_ActiViewCameraQty" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_custom_OtherCommentsorrequests">Other Comments or requests</label>
+        <textarea cols="24" id="inf_custom_OtherCommentsorrequests" name="inf_custom_OtherCommentsorrequests" rows="5">
+    </textarea></div>
+    <div class="infusion-submit">
+        <input type="submit" value="Submit" />
+    </div>
+</form>
+<script type="text/javascript" src="https://oc232.infusionsoft.com/app/webTracking/getTrackingCode?trackingId=a6f8988f5c138d860ff8ab155fe694c2"></script>
+#}

@@ -1,0 +1,132 @@
+description = "New"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ this.page.title }}</title>
+        <link rel="icon" type="image/png" href="{{ 'assets/images/bananone.png'|theme }}" />
+        {% styles %}
+        <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+        <link href="{{ [
+            'assets/less/app.less'
+        ]|theme }}" rel="stylesheet">
+    </head>
+    <body>
+        
+        <header id="layout-header">
+
+            <!-- Nav -->
+            <nav id="layout-nav" class="navbar navbar-fixed-top" role="navigation" style="background-color: #524417;">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand my-logo" href="{{ 'home'|page }}" style="color: #ffffff; margin: 0 auto; font-family: sans-serif;" onmouseover='this.style.backgroundColor="#ffffff", this.style.color="#524417"' onmouseout='this.style.backgroundColor="#524417", this.style.color="#ffffff"'>
+                            147tech
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse navbar-main-collapse">
+                        <ul class="nav navbar-nav" style="color: #fff;">
+                            <li class="{% if this.page.id == 'home' %}activ{% endif %}"><a href="{{ '404'|page }}" class="mynav" >Warning! Do not click this link.</a></li>
+
+                            {# Resources nav #}
+                            <li class="dropdown {% if this.page.id == 'resources' %}activ{% endif %}"><a href="{{ 'resources'|page }}" class="mynav dropdown-toggle" data-toggle="dropdown" >Resources <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                  <li class="{% if this.page.id == 'professional-development' %}activ{% endif %}"><a href="{{ 'professional-development'|page }}" class="mynav" >Professional Development</a></li>
+                                  <li class="{% if this.page.id == 'tutorials' %}activ{% endif %}"><a href="{{ 'tutorials'|page }}" class="mynav" >Video Tutorials</a></li>
+                                  <li class="{% if this.page.id == 'product-specs' %}activ{% endif %}"><a href="{{ 'product-specs'|page }}" class="mynav" >Product Specs</a></li>
+                                  <li class="{% if this.page.id == 'blog' %}activ{% endif %}"><a href="{{ 'blog'|page }}" class="mynav" >Blogs</a></li>
+                                  <li class="divider"></li>
+                                  <li class="{% if this.page.id == 'forum' %}activ{% endif %}"><a href="{{ 'resources'|page }}" class="mynav" >Resources Page</a></li>
+                                </ul>
+                            </li>
+
+                            {# Support nav #}
+                            <li class="dropdown {% if this.page.id == 'support' %}activ{% endif %}"><a href="{{ 'support'|page }}" class="mynav dropdown-toggle" data-toggle="dropdown" >Support <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                  <li class="{% if this.page.id == 'forum' %}activ{% endif %}"><a href="{{ 'forum'|page }}" class="mynav" >Forum</a></li>
+                                  <li class="{% if this.page.id == 'ticket' %}activ{% endif %}"><a target="_blank" href="#" class="mynav" >Submit a support ticket</a></li>
+                                  <li class="divider"></li>
+                                  <li class="{% if this.page.id == 'support' %}activ{% endif %}"><a href="{{ 'support'|page }}" class="mynav" >Support Page</a></li>
+                                </ul>
+                            </li>
+                            
+                            {# Events nav #}
+                            <li class="{% if this.page.id == 'events' %}activ{% endif %}"><a href="{{ 'events'|page }}" class="mynav" >Events</a></li>
+                            
+                            {# Contact nav #}
+                            <li class="dropdown {% if this.page.id == 'contact' %}activ{% endif %}"><a href="{{ 'contact'|page }}" class="mynav dropdown-toggle" data-toggle="dropdown" >Contact Us <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                  <li class="{% if this.page.id == 'email' %}activ{% endif %}"><a href="mailto:billy147@zoho.com" class="mynav" >Email</a></li>
+                                  <li class="{% if this.page.id == 'phone' %}activ{% endif %}"><a target="_blank" href="" class="mynav" >Call: Someone who cares</a></li>
+                                  <li class="divider"></li>
+                                  <li class="{% if this.page.id == 'contact' %}activ{% endif %}"><a href="{{ 'contact'|page }}" class="mynav" >Contact Page</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            {% if user %}
+                                <li><a href="#" data-request="onLogout" class="mynav">Logout</a></li>
+                            {% else %}
+                                <li><a href="{{ 'account'|page }}" class="mynav">Account</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+        
+        <!-- Content -->
+        <section id="layout-content">
+            <div class="jumbotron hero">
+                <div class="container" style="padding:;">
+                    <div class="col-md-5 col-md-offset-7" style="background-color: rgba(255,255,255,0.7); border-radius: 5px; color: #524417; padding: 3%;">
+                    <h1>Welcome to 147tech</h1>
+                    {#<p>Please look around, enjoy...stay awhile.</p>#}
+                    <br/>
+                    <p>Under construction...see ya soon!</p>
+                </div>
+                </div>
+            </div>
+            <div class="container">
+                {% page %}
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer id="layout-footer">
+            <div class="space" style="width: 100%; height: 15px;"></div>
+            {% partial "footer" %}
+        </footer>
+
+        <script src="{{ [
+            'assets/js/jquery.js',
+
+            'assets/vendor/bootstrap/js/transition.js',
+            'assets/vendor/bootstrap/js/alert.js',
+            'assets/vendor/bootstrap/js/button.js',
+            'assets/vendor/bootstrap/js/carousel.js',
+            'assets/vendor/bootstrap/js/collapse.js',
+            'assets/vendor/bootstrap/js/dropdown.js',
+            'assets/vendor/bootstrap/js/modal.js',
+            'assets/vendor/bootstrap/js/tooltip.js',
+            'assets/vendor/bootstrap/js/popover.js',
+            'assets/vendor/bootstrap/js/scrollspy.js',
+            'assets/vendor/bootstrap/js/tab.js',
+            'assets/vendor/bootstrap/js/affix.js',
+
+            '@framework',
+            '@framework.extras',
+
+            'assets/js/app.js']|theme }}"></script>
+
+        {% scripts %}
+        
+    </body>
+</html>

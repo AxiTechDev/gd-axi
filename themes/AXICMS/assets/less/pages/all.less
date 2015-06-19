@@ -1,0 +1,82 @@
+//
+// Pages
+//
+// Styles specific to individual pages.
+//
+
+// For product page
+
+.cust-spacer {
+	height: 20px;
+}
+
+.btn-spec {
+	background-color: #FFFFFF;
+	box-shadow: inset 2px 2px 5px #505050;
+	background-image:linear-gradient(rgba(51,51,51,0.3), rgba(51,51,51,0.7));
+
+	a {
+		color: #ffffff;
+		font-size: 1.2em;
+	}
+
+}
+
+.btn-spec:hover {
+		background-color: #505050;
+}
+
+// End product page
+
+// For carousel on catalog.htm
+
+.item img {
+    width: ;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+
+/* collapsed sidebar styles */
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+  }
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -41.6%;
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -41.6%;
+  }
+  .row-offcanvas-right.active {
+    right: 41.6%;
+  }
+  .row-offcanvas-left.active {
+    left: 41.6%;
+  }
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 41.6%;
+  }
+  #sidebar {
+    padding-top:0;
+  }
+}
+
+.active button {
+	background-color: orange;
+}
+
+/* Products page */
+.products-thumb img {
+    margin: 0 auto;
+}
+
+
+

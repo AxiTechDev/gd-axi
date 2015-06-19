@@ -1,0 +1,129 @@
+{% set districts = __SELF__.districtList %}
+{% set schools = __SELF__.schoolList %}
+
+
+        {# School and customer info #}
+        <div class="basic" >
+            
+            <div class="basic inner" id="info-field">
+            <div class="basic"><h2>School Info</h2></div>
+            <div class="spacer"></div>
+                {# districts #}
+                <label>District<span style="color:red;">*</span></label><br/>
+                <select class="dist" id="" >
+                    <option selected disabled>Please Select District</option>
+                    <option value="other">Not Listed</option>
+                    {% for district in districts %}
+                        <option value="{{ district }}">{{ district }}</option>        
+                    }
+                    {% endfor %}
+       :         </select>
+                <br />
+                <div style="width: 40%; margin: 0 auto;" ><small >*If you are in a private or Christian school, your school may also be listed as the district and should be chosen.</small></div>
+                <div class="other_dist_field"></div>
+
+                <script type="text/javascript">
+                  $(document).ready(function(){
+                    $("select.dist").change(function(){
+            
+                      var selectedDistrict = $(".dist option:selected").val();
+                      if (selectedDistrict == 'other') {
+                        $(".other_dist_field").append('<label>District:&nbsp;&nbsp;</label><input type="text" id="inf_custom_District" name="inf_custom_District" >');
+                      }
+                      else {
+                        $(".other_dist_field").append('<label>District:&nbsp;&nbsp;</label><input type="text" id="inf_custom_District" name="inf_custom_District" hidden="true" value="' + selectedDistrict + '" >');
+                      }
+                    });
+                 });
+                </script>                
+                <br/>
+                {# schools #}
+                <label>School<span style="color:red;">*</span></label><br />    
+                <div id="school-div" >
+                  <div id="scrollable-dropdown-menu" class="tt-dataset">
+                    <input class="typeahead tt-input" id="inf_custom_SchoolDistrict" name="inf_custom_SchoolDistrict" type="text" placeholder="Enter Your School">
+                  </div>
+                  <ul></ul>
+
+                  
+                <script type="text/javascript" >
+                  var substringMatcher = function(strs) {
+                    return function findMatches(q, cb) {
+                      var matches, substringRegex;
+
+                      // an array that will be populated with substring matches
+                      matches = [];
+
+                      // regex used to determine if a string contains the substring `q`
+                      substrRegex = new RegExp(q, 'i');
+
+                      // iterate through the pool of strings and for any string that
+                      // contains the substring `q`, add it to the `matches` array
+                      $.each(strs, function(i, str) {
+                        if (substrRegex.test(str)) {
+                          matches.push(str);
+                        }
+                      });
+
+                      cb(matches);
+                    };
+                  };
+
+                  var mySchools = {{(schools|json_encode|raw)}};
+
+                  // #scrollable-dropdown-menu
+                  $('#scrollable-dropdown-menu .typeahead').typeahead({
+                  hint: true,
+                  highlight: true,
+                  minLength: 2
+                  },
+                  {
+                    name: 'schools',
+                    source: substringMatcher(mySchools)
+                  });
+
+                  
+                </script>
+
+                
+
+                <br />
+                <label>Room #<span style="color:red;">*</span></label><br />
+                <input type="text" id="inf_custom_Roomnumber" name="inf_custom_Roomnumber" >
+                <br />
+                <div class="form-group">
+              <span class="text-muted"><em><span style="color:red;">*</span> Indicates required field</em></span>
+            </div>
+            </div>
+
+            <div class="spacer"></div>
+            <div style="width: 45%; margin: 0 auto; "><hr /></div>
+	    <div class="spacer"></div>
+
+            <div class="basic"><h2>Your Info</h2></div>
+            <div class="spacer"></div>
+            <div class="info-field" >
+                <label>First Name<span style="color:red;">*</span></label><br />
+                <input type="text" id="inf_field_FirstName" name="inf_field_FirstName" >
+                <br />
+                <label>Last Name<span style="color:red;">*</span></label><br />
+                <input type="text" id="inf_field_LastName" name="inf_field_LastName" >
+                <br />
+                <label>Email<span style="color:red;">*</span></label><br />
+                <input type="text" id="inf_field_Email" name="inf_field_Email" >
+                <br />
+            </div>
+            <div class="form-group">
+              <span class="text-muted"><em><span style="color:red;">*</span> Indicates required field</em></span>
+            </div>
+          <div class="spacer"></div>
+          <div class="spacer"></div>
+        </div>
+
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+
+
+
+
+       

@@ -1,0 +1,14 @@
+title = "new-form"
+url = "/new-form"
+layout = "form"
+hidden = "0"
+
+[checker]
+==
+<link href="{{ [
+            'assets/less/pages/all.less'
+        ]|theme }}" rel="stylesheet">
+        
+<div>
+    {% component 'checker' %}
+</div>

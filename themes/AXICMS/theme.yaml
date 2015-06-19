@@ -1,0 +1,9 @@
+name: 'AXI Education Solutions'
+description: 'A plain starter template that implements account management, a blog and community forum.'
+author: 147tech
+homepage: 'http://axiedu.com'
+code: ''
+require:
+    - RainLab.User
+    - RainLab.Blog
+    - RainLab.Forum

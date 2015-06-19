@@ -1,0 +1,9 @@
+name: 'The World Over'
+description: 'Though we travel the world over to find the beautiful, we must carry it with us or we find it not. '
+author: 'billy Williamson'
+homepage: 'http://theworldover.today'
+code: ''
+require:
+    - RainLab.User
+    - RainLab.Blog
+    - RainLab.Forum

@@ -1,0 +1,72 @@
+//
+// Layouts
+//
+// Styles specific to different page layouts.
+//
+
+// Used by the fixed navigation
+body {
+    padding-top: 75px;
+    text-align: center;
+}
+
+header#layout-header {
+
+    .navbar-brand {
+        padding-left: 500px;
+        background-image: url('../images/main/axi.png');
+        background-size: auto 80%;
+        background-repeat: no-repeat;
+        background-position: 7px 50%;
+    }
+
+    #layout-nav {
+        background-color: #FF6600;
+        color: #ffffff;
+    }
+
+    .mynav {
+      background-color: #FF6600;
+      color: #ffffff;
+    }
+    
+    .mynav:hover {
+        background-color: rgba(98,98,98,0.2);
+    }
+
+    .activ {
+    	background-color: rgba(98,98,98,0.4);
+    }
+
+    .caret-up {
+      width:0;
+      height: 0;
+      border-left: 4px solid rgba(0, 0, 0, 0);
+      border-right: 4px solid rgba(0, 0, 0, 0);
+      border-bottom: 4px solid;
+      display: inline-block;
+      margin-left: 2px;
+      vertical-align: middle;
+    }
+
+    
+
+    .divider {
+      margin: 0;
+    }
+
+
+}
+
+.hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(51,51,51,0.6)), color-stop(100%, rgba(51,51,51,0.6))), url( "../images/main/master1.jpg"); /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, rgba(51,51,51,0.6), rgba(51,51,51,0.6)), url( "../images/main/master1.jpg"); /* Chrome10+,Safari5.1+ */
+    background-image:    -moz-linear-gradient(top, rgba(51,51,51,0.6), rgba(51,51,51,0.6)), url( "../images/main/master1.jpg"); /* FF3.6+ */
+    background-image:     -ms-linear-gradient(top, rgba(51,51,51,0.6), rgba(51,51,51,0.6)), url( "../images/main/master1.jpg"); /* IE10+ */
+    background-image:      -o-linear-gradient(top, rgba(51,51,51,0.6), rgba(51,51,51,0.6)), url( "../images/main/master1.jpg"); /* Opera 11.10+ */
+    background-image:         linear-gradient(to bottom, rgba(51,51,51,0.6), rgba(51,51,51,0.6)), url( "../images/main/master1.jpg"); /* W3C */
+    background-size: cover; 
+    background-repeat: no-repeat; 
+}
+
+// background-color: rgba(98,98,98,0.5); Took this out of .hero styling. Can't remember why it was there...

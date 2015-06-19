@@ -1,0 +1,68 @@
+[staticPage]
+==
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>{{ this.page.title }}</title>
+
+        <!-- Bootstrap core CSS -->
+        <link 
+            rel="stylesheet" 
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+        <!-- Theme CSS -->
+        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- Static navbar -->
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" 
+                                data-toggle="collapse" 
+                                data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Static Pages Demo</a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <!-- 
+                            The menus will be here 
+                        -->
+                    </div><!--/.nav-collapse -->
+                </div><!--/.container-fluid -->
+            </div>
+        </div> <!-- /container -->
+
+        <div class="container">
+            <div class="row">{% component 'staticPage' %}
+                <div class="col-sm-8">
+                    <!-- 
+                        We will place the page contents here
+                    -->
+                    {% page %}
+                </div>
+
+                <div class="col-sm-3 col-sm-offset-1">
+                    <div class="sidebar">
+                        <!-- 
+                            The blog category list will be displayed here
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    </body>
+</html>

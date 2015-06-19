@@ -1,0 +1,100 @@
+description = "Default Layout"
+==
+<?php
+function onInit()
+{
+    $user = \BackendAuth::getUser();
+    $filepath = '';
+    if ( $user && $user -> avatar ) {
+            $filepath = $user -> avatar -> getPath();
+    }
+    $this['profilePhoto'] = $filepath;
+}
+?>
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <title>{{ this.theme.blog_name }} | {{ this.page.title }} </title>
+        <meta name="author" content="October CMS">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="{{ this.page.meta_description }}" />
+        <meta name="keywords" content="{{ this.page.meta_keywords }}" />
+    
+        <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}" />
+        {% styles %}
+        
+        <link href="{{ [
+            'assets/css/normalize.css',
+            'assets/css/theme.css',
+            'assets/css/print.css'
+        ]|theme }}" rel="stylesheet">
+        
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+        
+        <!-- REPLACE THIS LINE WITH A FEED COMPONENT OR RSS FEED LINK FROM A SUITABLE RSS FEED PLUGIN-->
+    </head>
+<body>
+    <a href="{{ '/'|app }}" class="logo-readium"><span class="logo" style="background-image: url({% if this.theme.use_profile_photo %}{{ profilePhoto }}{% else %}{{ 'assets/images/logo.png'|theme}}{% endif %})"></span></a>
+
+{% if noHeader is null %}
+<div class="teaserimage">
+    <div class="teaserimage-image" {% if this.theme.use_blog_cover %}style="background-image: url({{ 'assets/images/cover.jpg'|theme }})"{% endif %}></div>
+</div>
+<header class="blog-header">
+
+    {% partial 'header' %}
+    {% partial 'nav' %}
+    
+</header>
+{% endif %}
+
+<main class="content" role="main">
+    {% page %}
+</main>
+
+    {% partial 'footer' %}
+    
+    <!-- Scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ 'assets/javascript/jquery.js'|theme }}"><\/script>')</script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="{{ [
+        'assets/javascript/index.js'
+    ]|theme }}"></script>
+
+    <script>
+        (function ($) {
+            "use strict";
+    
+            $(document).ready(function(){
+    
+                var $window = $(window),
+                    $image = $('.teaserimage-image');
+                $window.on('scroll', function() {
+                    var top = $window.scrollTop();
+    
+                    if (top < 0 || top > 1500) { return; }
+                    $image
+                        .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+                        .css('opacity', 1-Math.max(top/700, 0));
+                });
+                $window.trigger('scroll');
+    
+            });
+    
+        }(jQuery));
+    </script>
+    
+    {% framework extras %}
+    {% scripts %}
+</body>
+</html>

@@ -1,0 +1,145 @@
+description = "Default layout"
+
+[session]
+security = "all"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>AXI | {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="AXI Education Solutions">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/main/axi_icon.png'|theme }}" />
+        {% styles %}
+        <link href="{{ [
+            'assets/less/theme.less'
+        ]|theme }}" rel="stylesheet">
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header id="layout-header">
+
+            <!-- Nav -->
+            <nav id="layout-nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="{{ 'home'|page }}" style="width: 100%;"></a>
+                    </div>
+                    <div class="collapse navbar-collapse navbar-main-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="{% if this.page.id == 'home' %}activ{% endif %}"><a href="{{ 'home'|page }}" class="mynav" >Home</a></li>
+
+                            {# Solutions nav #}
+                            <li class="dropdown {% if this.page.id == 'solutions' %}activ{% endif %}"><a href="{{ 'solutions'|page }}" class="mynav dropdown-toggle" data-toggle="dropdown" >Solutions <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                  <li class="{% if this.page.id == 'products' %}activ{% endif %}"><a href="{{ 'products'|page }}" class="mynav" >Products</a></li>
+                                  <li class="{% if this.page.id == 'catalog' %}activ{% endif %}"><a href="{{ 'catalog'|page }}" class="mynav" >Spring Catalog</a></li>
+                                  <li class="{% if this.page.id == 'specials' %}activ{% endif %}"><a href="{{ 'specials'|page }}" class="mynav" >Specials</a></li>
+                                  <li class="{% if this.page.id == 'store' %}activ{% endif %}"><a href="http://axi.eduresource.com/" target="_blank" class="mynav" >Store</a></li>
+                                  <li class="divider"></li>
+                                  <li class="{% if this.page.id == 'solutions' %}activ{% endif %}"><a href="{{ 'solutions'|page }}" class="mynav" >Solutions Page</a></li>
+                                </ul>
+                            </li>
+
+                            {# Resources nav #}
+                            <li class="dropdown {% if this.page.id == 'resources' %}activ{% endif %}"><a href="{{ 'resources'|page }}" class="mynav dropdown-toggle" data-toggle="dropdown" >Resources <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                  <li class="{% if this.page.id == 'professional-development' %}activ{% endif %}"><a href="{{ 'professional-development'|page }}" class="mynav" >Professional Development</a></li>
+                                  <li class="{% if this.page.id == 'tutorials' %}activ{% endif %}"><a href="{{ 'tutorials'|page }}" class="mynav" >Video Tutorials</a></li>
+                                  <li class="{% if this.page.id == 'product-specs' %}activ{% endif %}"><a href="{{ 'product-specs'|page }}" class="mynav" >Product Specs</a></li>
+                                  <li class="{% if this.page.id == 'blog' %}activ{% endif %}"><a href="{{ 'blog'|page }}" class="mynav" >Blogs</a></li>
+                                  <li class="divider"></li>
+                                  <li class="{% if this.page.id == 'forum' %}activ{% endif %}"><a href="{{ 'resources'|page }}" class="mynav" >Resources Page</a></li>
+                                </ul>
+                            </li>
+
+                            {# Support nav #}
+                            <li class="dropdown {% if this.page.id == 'support' %}activ{% endif %}"><a href="{{ 'support'|page }}" class="mynav dropdown-toggle" data-toggle="dropdown" >Support <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                  <li class="{% if this.page.id == 'forum' %}activ{% endif %}"><a href="{{ 'forum'|page }}" class="mynav" >Forum</a></li>
+                                  <li class="{% if this.page.id == 'ticket' %}activ{% endif %}"><a target="_blank" href="http://www.thinkhelpdesk.com/axiedu/usr_job.cfm" class="mynav" >Submit a support ticket</a></li>
+                                  <li class="divider"></li>
+                                  <li class="{% if this.page.id == 'support' %}activ{% endif %}"><a href="{{ 'support'|page }}" class="mynav" >Support Page</a></li>
+                                </ul>
+                            </li>
+                            
+                            {# Events nav #}
+                            <li class="{% if this.page.id == 'events' %}activ{% endif %}"><a href="{{ 'events'|page }}" class="mynav" >Events</a></li>
+                            
+                            {# Contact nav #}
+                            <li class="dropdown {% if this.page.id == 'contact' %}activ{% endif %}"><a href="{{ 'contact'|page }}" class="mynav dropdown-toggle" data-toggle="dropdown" >Contact Us <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                  <li class="{% if this.page.id == 'email' %}activ{% endif %}"><a href="mailto:info@axiedu.com" class="mynav" >Email</a></li>
+                                  <li class="{% if this.page.id == 'phone' %}activ{% endif %}"><a target="_blank" href="tel:+1-888-493-0608" class="mynav" >Call: 888.493.0608</a></li>
+                                  <li class="divider"></li>
+                                  <li class="{% if this.page.id == 'contact' %}activ{% endif %}"><a href="{{ 'contact'|page }}" class="mynav" >Contact Page</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            {% if user %}
+                                <li><a href="#" data-request="onLogout" class="mynav">Logout</a></li>
+                            {% else %}
+                                <li><a href="{{ 'account'|page }}" class="mynav">Account</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+
+        <!-- Content -->
+        <section id="layout-content">
+            <div class="jumbotron hero">
+                <div class="container">
+                    <h1 style="color: #ffffff; " >{{ this.page.title }}</h1>
+                    <p style="color: #ffffff; " >{{ this.page.description }}</p>
+                </div>
+                </div>
+            </div>
+            <div class="container">
+                {% page %}
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="layout-footer">
+            <div class="space" style="width: 100%; height: 15px;"></div>
+            {% partial "footer" %}
+            <div class="space" style="width: 100%; height: 15px;"></div>
+            <div class="space" style="width: 100%; height: 15px;"></div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="{{ [
+            'assets/javascript/jquery.js',
+            'assets/vendor/bootstrap/js/transition.js',
+            'assets/vendor/bootstrap/js/alert.js',
+            'assets/vendor/bootstrap/js/button.js',
+            'assets/vendor/bootstrap/js/carousel.js',
+            'assets/vendor/bootstrap/js/collapse.js',
+            'assets/vendor/bootstrap/js/dropdown.js',
+            'assets/vendor/bootstrap/js/modal.js',
+            'assets/vendor/bootstrap/js/tooltip.js',
+            'assets/vendor/bootstrap/js/popover.js',
+            'assets/vendor/bootstrap/js/scrollspy.js',
+            'assets/vendor/bootstrap/js/tab.js',
+            'assets/vendor/bootstrap/js/affix.js',
+            'assets/javascript/app.js'
+        ]|theme }}"></script>
+        {% framework extras %}
+        {% scripts %}
+
+    </body>
+</html>

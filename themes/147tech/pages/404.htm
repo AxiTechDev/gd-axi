@@ -1,0 +1,178 @@
+title = "Page Not Found"
+url = "/404"
+hidden = "0"
+==
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Not Found</title>
+    <!-- Get jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="{{ 'assets/js/typed.js'|theme }}" type="text/javascript"></script>
+    <script>
+    $(function(){
+
+        $("#typed").typed({
+            strings: ["^1000 404 Page Not Found", "I'm sorry...^2000 It appears that your page\n cannot be found.", "All your page are^500 belong to us!"],
+            typeSpeed: 20,
+            backSpeed: 5,
+            backDelay: 1000,
+            loop: false,
+            contentType: 'html', // or text
+            // defaults to false for infinite loop
+            loopCount: false,
+            callback: function(){ foo(); },
+            resetCallback: function() { newTyped(); }
+        });
+
+        $(".reset").click(function(){
+            $("#typed").typed('reset');
+        });
+
+    });
+
+    function newTyped(){ /* A new typed object */ }
+
+    function foo(){ console.log("Callback"); }
+
+    </script>
+    {#<link href="main.css" rel="stylesheet"/>#}
+    <link href="{{ [
+            'assets/less/app.less'
+        ]|theme }}" rel="stylesheet">
+    <style>
+        /*@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,500);*/
+        @import url(http://fonts.googleapis.com/css?family=Press+Start+2P);
+*{
+	padding:0;
+	margin:0;
+}
+
+/* "Ubuntu", sans-serif */
+body{
+	font-family: 'Press Start 2P', cursive;
+	font-size: 100%;
+	background:#f8f8f8;
+}
+
+a{
+	text-decoration: none;
+	color:#666;
+}
+	a:hover{
+		color:#999;
+	}
+p{
+	line-height: 2em;
+	margin:0 0 20px;
+	text-align: center;
+}
+
+.wrap{
+	max-width: 600px;
+	margin:50px auto;
+	text-align: left;
+}
+
+.type-wrap{
+	margin:10px auto;
+	padding:20px;
+	background:#f0f0f0;
+	border-radius:5px;
+	border:#CCC 1px solid;
+}
+
+.links{
+	margin:20px 0;
+	font-size: 0.75em;
+	text-align: center;
+        /* code for animated blinking cursor */
+        .typed-cursor{
+            opacity: 1;
+            font-weight: 100;
+            -webkit-animation: blink 0.7s infinite;
+            -moz-animation: blink 0.7s infinite;
+            -ms-animation: blink 0.7s infinite;
+            -o-animation: blink 0.7s infinite;
+            animation: blink 0.7s infinite;
+        }
+        @-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-webkit-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-moz-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-ms-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-o-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <header id="layout-header">
+
+            <!-- Nav -->
+            <nav id="layout-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="box-shadow: 0 2px 20px -2px #FFE51E;">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand my-logo" href="{{ 'home'|page }}" style="color: #FFE51E; margin: 0 auto;" onmouseover='this.style.backgroundColor="#0007D5", this.style.color="#FFE51E"' onmouseout='this.style.backgroundColor="#222222", this.style.color="#FFE51E"'>
+                            {#<img src="{{ 'assets/images/cooltext121735120030534.png'|theme }}" style="width:45%;">#}
+                            147tech
+                        </a>
+                    </div>
+                </div
+            </nav>
+        
+    </header>
+    <div style="height: 50px; width: 100%;">&nbsp;</div>
+    <div style="height: 50px; width: 100%;">&nbsp;</div>
+    <div class="container">
+        <div class="jumbotron" style="color: #fff; background-color: #111111;" >
+    {#<div class="jumbotron" style="color: #fff; background-image: url({{ ('assets/images/base2.jpg')|theme }}); background-size: cover; background-repeat: no-repeat;">#}
+    <div class="wrap" >
+        <h1 class="h1">Code 404</h1>
+
+        <div class="type-wrap" style="color: #fff; background-color: #222222; height: 100px;">
+            <i>&gt;_&nbsp;&nbsp;</i><span id="typed" style="white-space:pre;"></span>
+        </div>
+
+        <div class="links">
+            <a href="http://www.mattboldt.com" target="_blank">Typed.js credit</a> 
+        </div>
+    </div>
+    </div>
+    </div>
+    
+    <!-- Footer -->
+        <footer id="layout-footer">
+            <div class="space" style="width: 100%; height: 15px;"></div>
+            {% partial "footer" %}
+        </footer>
+
+</body>
+
+</html>

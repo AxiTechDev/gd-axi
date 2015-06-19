@@ -1,0 +1,9 @@
+name: 'SBH Reunion Theme'
+description: 'Classes of 2000 and 2001 hosting a reunion'
+author: 147tech
+homepage: 'http://147tech.com'
+code: ''
+require:
+    - RainLab.User
+    - RainLab.Blog
+    - RainLab.Forum
